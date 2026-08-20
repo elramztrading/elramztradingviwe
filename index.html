@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= LOGIN PAGE ================= -->
+<section id="loginPage" class="page login-page">
+    <div class="login-background"></div>
+    <div class="login-container">
+        <div class="logo">
+            <h1>Investment Portfolio</h1>
+            <p>Secure Client Login</p>
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter Username" autocomplete="off" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <div class="password-box">
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                    <span id="togglePassword">👁</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone" placeholder="05XXXXXXXX" maxlength="10" required>
+            </div>
+            <button type="submit" id="loginBtn">LOGIN</button>
+            <p id="message"></p>
+        </form>
+    </div>
+</section>
+
+<!-- ================= PORTFOLIO PAGE ================= -->
+<section id="portfolioPage" class="page portfolio-page hidden">
+    <div class="phone">
+
+        <!-- الهيدر والكروت (ثابتة فوق) -->
+        <div class="phone-header">
+            <div class="header">
+                <div class="profile">
+                    <div class="portfolio-avatar">M</div>
+                    <div>
+                        <h3>Investment Portfolio</h3>
+                        <span>Premium Account</span>
+                    </div>
+                </div>
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <p>Total Portfolio</p>
+                <h1 id="portfolioValue">$0</h1>
+                <h2 id="profit">+$0</h2>
+                <span>Total Profit</span>
+            </div>
+
+            <div class="cards">
+                <div class="small-card">
+                    <p>Cash Balance</p>
+                    <h3 id="cash">$0</h3>
+                </div>
+                <div class="small-card">
+                    <p>Buying Power</p>
+                    <h3 id="buying">$0</h3>
+                </div>
+            </div>
+
+            <div class="stocks-title">
+                <h2>Your Stocks</h2>
+            </div>
+        </div>
+
+        <!-- قائمة الأسهم (الجزء اللي بيعمل Scroll) -->
+        <div class="stock-list">
+            <!-- BNNK -->
+            <div class="stock">
+                <div class="left">
+                    <div class="icon green">B</div>
+                    <div>
+                        <h3>BNNK</h3>
+                        <p id="bnnkPrice">$12.50</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 id="bnnkShares">0 Shares</h3>
+                    <p class="profit" id="bnnkProfit">0%</p>
+                </div>
+            </div>
+
+            <!-- PAPL -->
+            <div class="stock">
+                <div class="left">
+                    <div class="icon blue">P</div>
+                    <div>
+                        <h3>PAPL</h3>
+                        <p id="paplPrice">$1.020</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 id="paplShares">0 Shares</h3>
+                    <p class="profit" id="paplProfit">0%</p>
+                </div>
+            </div>
+
+            <!-- SLV -->
+            <div class="stock">
+                <div class="left">
+                    <div class="icon orange">S</div>
+                    <div>
+                        <h3>SLV</h3>
+                        <p id="slvPrice">$28.50</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <h3 id="slvShares">0 Shares</h3>
+                    <p class="profit" id="slvProfit">0%</p>
+                </div>
+            </div>
+
+            <!-- مساحة فارغة عشان الـ Scroll يطلع كويس وميلزق في الناف بار -->
+            <div class="scroll-spacer"></div>
+        </div>
+
+        <!-- القائمة السفلية (ثابتة تحت) -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Markets</span>
+            </div>
+            <div class="nav-item">
+                <i class="fa-solid fa-coins"></i>
+                <span>Assets</span>
+            </div>
+            <div class="nav-item" id="profileNav">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROFILE PAGE ================= -->
+<section id="profilePage" class="page profile-page hidden">
+    <div class="profile-container">
+        <div class="profile-card">
+
+            <div class="profile-avatar">M</div>
+
+            <h1> عبدالعزيز محمد ابراهيم الثنيان</h1>
+
+            <p class="profile-id">Portfolio ID</p>
+            <h2>800963607</h2>
+
+            <div class="profile-info">
+                <div>
+                    <span>Total Portfolio</span>
+                    <h3>$0.00</h3>
+                </div>
+
+                <div>
+                    <span>Total Profit</span>
+                    <h3 class="profile-green">+$0.00</h3>
+                </div>
+            </div>
+
+            <button id="backHomeBtn">Back To Portfolio</button>
+
+        </div>
+    </div>
+</section>
+
+<!-- JS Link -->
+<script src="script.js"></script>
+
+</body>
+</html>
