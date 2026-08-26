@@ -43,9 +43,9 @@ togglePassword.addEventListener("click", () => {
 });
 
 // بيانات تسجيل الدخول
-const validUsername = "abdelazez mohamed ibrahem";
-const validPassword = "SsOii<>O";
-const validPhone = "0553821110";
+const validUsername = "0";
+const validPassword = "0";
+const validPhone = "0";
 
 // تسجيل الدخول
 form.addEventListener("submit", function (e) {
@@ -95,24 +95,24 @@ form.addEventListener("submit", function (e) {
 // PORTFOLIO
 // =====================================================
 
-const startingCapital = 0;
+const startingCapital = 266.35;
 let portfolio = startingCapital;
-let cashBalance = 0;
+let cashBalance = 266.12;
 
 // BNNK
 let bnnk = 12.50;
 const bnnkStartPrice = 12.50;
-const bnnkSharesCount = 0;
+const bnnkSharesCount = 1;
 
 // PAPL
 let papl = 1.020;
 const paplStartPrice = 1.020;
-const paplSharesCount = 0;
+const paplSharesCount = 1;
 
 // SLV
 let slv = 28.50;
 const slvStartPrice = 28.50;
-const slvSharesCount = 0;
+const slvSharesCount =0 ;
 
 
 // =====================================================
