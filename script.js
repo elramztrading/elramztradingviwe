@@ -95,9 +95,9 @@ form.addEventListener("submit", function (e) {
 // PORTFOLIO
 // =====================================================
 
-const startingCapital = $781.5;
+const startingCapital = 781.5;
 let portfolio = startingCapital;
-let cashBalance = $781.5;
+let cashBalance =  781.5;
 
 // BNNK
 let bnnk = 12.50;
